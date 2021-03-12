@@ -25,7 +25,7 @@ class FuelTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.fuel_type.create');
     }
 
     /**
@@ -36,7 +36,21 @@ class FuelTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validation
+        $this->validate($request,[
+            'fuel_name' => 'required|string|unique:fuel_types|max:255',
+        ]);
+
+        $fuels = new FuelType();
+        $fuels->fuel_name = $request->fuel_name;
+        $fuels->save();
+
+       // Need Refactor
+      // $fuels = FuelType()->create($request->validate());
+
+
+        session()->flash('success','Fuel Type Created Successfully!');
+        return redirect()->route('admin.fueltype');
     }
 
     /**

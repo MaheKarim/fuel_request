@@ -14,12 +14,19 @@
     </div>
 @endif
 <!-- Notification End Here -->
+<!-- Notification Start Here -->
+@if (session()->has('success'))
+    <div class="alert alert-success">
+        {{ session()->get('success') }}
+    </div>
+@endif
+<!-- Notification End Here -->
 
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table ml-1"></i>
                 Fuel Table
-                <a class="btn btn-success float-right" href="">Add Fuel Type</a>
+                <a class="btn btn-success float-right" href="{{ route('admin.fueltype.create') }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Add Fuel Type</a>
 
             </div>
             <div class="card-body">
