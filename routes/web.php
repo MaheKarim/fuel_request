@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/dashboard', 'UserController@index')->name('user.home');
 Route::get('/admin/dashboard', 'AdminController@index')->name('admin.home');
+
+
+// Admin Route Will Be Here
+Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministrator'])->group(function () {
+
+    Route::get('/fuel-type', 'FuelTypeController@index');
+});

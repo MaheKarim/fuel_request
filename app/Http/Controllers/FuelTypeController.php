@@ -14,7 +14,7 @@ class FuelTypeController extends Controller
      */
     public function index()
     {
-        //
+        return 'test';
     }
 
     /**
