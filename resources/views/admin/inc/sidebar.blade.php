@@ -6,27 +6,44 @@
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                 Dashboard
             </a>
+
+            <div class="sb-sidenav-menu-heading">Pages</div>
+
+            <a class="nav-link" href="">
+                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                Users
+            </a>
+
+
             <div class="sb-sidenav-menu-heading">Interface</div>
 
-            {{--  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                Pages
+                Global Settings
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                    <a class="nav-link" href="{{ route('admin.fueltype') }}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-gas-pump"></i></div>
+                        Fuel Type
+                    </a>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                        Authentication
-                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-file-prescription"></i></div>
+
+                        Refueling For
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
+                        Area
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        <div class="sb-nav-link-icon"><i class="fas fa-walking"></i></div>
+                        Priority Set
                     </a>
                 </nav>
-            </div>  --}}
-            <div class="sb-sidenav-menu-heading">Addons</div>
+            </div>
 
-            <a class="nav-link" href="{{ route('admin.fueltype') }}">
-                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                Fuel Type
-            </a>
         </div>
     </div>
     <div class="sb-sidenav-footer">
