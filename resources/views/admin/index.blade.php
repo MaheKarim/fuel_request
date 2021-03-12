@@ -66,9 +66,40 @@
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table mr-1"></i>
-        DataTable
+        User Table
     </div>
-
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>PHN</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>PHN</th>
+                        <th>Created At</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach ($users as $user)
+                    <tr>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->phn }}</td>
+                        <td>{{ $user->created_at }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
     </div>
 </div>

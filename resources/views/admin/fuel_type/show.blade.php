@@ -27,14 +27,13 @@
                 <i class="fas fa-table ml-1"></i>
                 Fuel Table
                 <a class="btn btn-success float-right" href="{{ route('admin.fueltype.create') }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Add Fuel Type</a>
-
             </div>
+
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-
                                 <th>Fuel Type</th>
                                 <th>Created At</th>
                                 <th>Details</th>
@@ -42,7 +41,6 @@
                         </thead>
                         <tfoot>
                             <tr>
-
                                 <th>Fuel Type</th>
                                 <th>Created At</th>
                                 <th>Details</th>
