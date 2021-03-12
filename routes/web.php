@@ -24,5 +24,6 @@ Route::get('/admin/dashboard', 'AdminController@index')->name('admin.home');
 // Admin Route Will Be Here
 Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministrator'])->group(function () {
 
-    Route::get('/fuel-type', 'FuelTypeController@index');
+    Route::get('/fuel-type', 'FuelTypeController@index')->name('fueltype');
+    Route::delete('/fuel-type/{id}', 'FuelTypeController@destroy')->name('fueltype.destroy');
 });

@@ -23,7 +23,7 @@
             </div>  --}}
             <div class="sb-sidenav-menu-heading">Addons</div>
 
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="{{ route('admin.fueltype') }}">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                 Fuel Type
             </a>

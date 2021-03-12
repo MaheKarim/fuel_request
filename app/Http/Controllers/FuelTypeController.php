@@ -14,7 +14,8 @@ class FuelTypeController extends Controller
      */
     public function index()
     {
-        return 'test';
+        $fuels = FuelType::all();
+        return view('admin.fuel_type.show', compact('fuels'));
     }
 
     /**
@@ -78,8 +79,13 @@ class FuelTypeController extends Controller
      * @param  \App\FuelType  $fuelType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FuelType $fuelType)
+    public function destroy($id)
     {
-        //
+        // testing code
+        $fuels = FuelType::where('id', $id)->firstOrFail()->delete();
+        session()->flash('error', 'Deleted Successfully!');
+
+        return redirect()->route('admin.fueltype');
+
     }
 }
