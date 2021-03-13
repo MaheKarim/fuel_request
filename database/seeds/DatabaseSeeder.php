@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
          $this->call(LaratrustSeeder::class);
          $this->call(FuelTypeSeeder::class);
          $this->call(RefuellingSeeder::class);
+         $this->call(PrioritySeeder::class);
     }
 }

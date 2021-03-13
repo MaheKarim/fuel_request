@@ -24,4 +24,9 @@ class FuelDelivery extends Model
     {
         return $this->belongsTo(User::class);
     }
+    // Priority Set
+    public function Priority()
+    {
+        return $this->belongsTo(Priority::class, 'priority_name_id', 'id');
+    }
 }

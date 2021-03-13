@@ -22,6 +22,7 @@ class CreateFuelDeliveriesTable extends Migration
             $table->integer('phn_number')->nullable();
             $table->string('delivery_address');
             $table->string('quantity');
+            $table->string('priority_name_id')->nullable();
             $table->boolean('isApproved')->default('0')->comment('1 for Approve');
             $table->timestamps();
         });

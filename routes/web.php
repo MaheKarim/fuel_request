@@ -14,19 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome');
-
 Auth::routes();
 
 Route::get('/user/dashboard', 'UserController@index')->name('user.home');
 Route::get('/admin/dashboard', 'AdminController@index')->name('admin.home');
 
-
 // Admin Route Will Be Here
 Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministrator'])->group(function () {
+    // Fuel Delivery
     Route::get('/fuel-delivery','AdminController@show_request')->name('fueldelivery');
     Route::get('/fuel-delivery/edit/{id}','AdminController@delivery_edit')->name('deliveryEdit');
     Route::post('/fuel-delivery/update/{id}','AdminController@delivery_update')->name('fuelDeliveryUpdate');
     Route::delete('/fuel-delivery/delete/{id}', 'AdminController@delivery_destroy')->name('deliveryDestroy');
+    Route::get('/fuel-delivery/order/details/{id}','AdminController@details')->name('delivery.details');
     // Fuel Type Route
     Route::get('/fuel-type', 'FuelTypeController@index')->name('fueltype');
     Route::get('/fuel-type/create', 'FuelTypeController@create')->name('fueltype.create');
@@ -44,7 +44,6 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministr
 });
 
 // User Route Here
-
 Route::name('user.')->prefix('user')->middleware(['auth', 'role:user'])->group(function () {
     // Fuel Delivery - User
     Route::get('/fuel-delivery', 'FuelDeliveryController@index')->name('fuelDelivery');

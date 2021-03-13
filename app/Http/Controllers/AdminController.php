@@ -47,4 +47,11 @@ class AdminController extends Controller
 
         return redirect()->route('admin.fueldelivery');
     }
+
+    public function details($id)
+    {
+        $delivery = FuelDelivery::find($id);
+
+        return view('admin.fuel-delivery.full_order', compact('delivery'));
+    }
 }

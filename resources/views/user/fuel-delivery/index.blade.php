@@ -71,6 +71,17 @@
                         <input type="number" class="form-control" name="quantity" placeholder=" 10 (minimum 5 Ltr.)">
                     </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="SetDelivery">Set Delivery Signal</label>
+                            <select name="priority_name_id" class="form-control select">
+                                @php($priorities = \App\Priority::all())
+                                @foreach ($priorities as $priority)
+                                    <option value="{{ $priority->id }}" {{ old('priority_name_id') == $priority->id ? 'selected' : '' }}>{{$priority->priority_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

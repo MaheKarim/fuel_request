@@ -33,17 +33,14 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th>ID</th>
+{{--                        <th>ID</th>--}}
                         <th>User</th>
                         <th>Fuel Name</th>
-                        <th>Refueling Reason</th>
                         <th>Booking Date</th>
-                        <th>PHN Number</th>
-                        <th>Delivery Address</th>
-                        <th>Quantity</th>
+{{--                        <th>Quantity</th>--}}
+                        <th>Delivery Priority</th>
                         <th>isApproved</th>
                         <th>Created At</th>
-                        <th>Updated At</th>
                         <th>Details</th>
                     </tr>
                     </thead>
@@ -51,14 +48,12 @@
                     <tbody>
                     @foreach ($delivery as $item)
                         <tr>
-                            <td>{{ $item->id }}</td>
+{{--                            <td>{{ $item->id }}</td>--}}
                             <td>{{ $item->user->name }}</td>
                             <td>{{ $item->Fuel->fuel_name }}</td>
-                            <td>{{ $item->RefuellingName->refueling_reason }}</td>
                             <td>{{ date('d-m-Y', strtotime($item->booking_date)) }}</td>
-                            <td>{{ $item->phn_number }}</td>
-                            <td>{{ $item->delivery_address }}</td>
-                            <td>{{ $item->quantity }}</td>
+{{--                            <td>{{ $item->quantity }}</td>--}}
+                            <td>{{ $item->Priority->priority_name }}</td>
                             <td>
                                 @if($item->isApproved == 0)
                                     <button type="button" class="btn btn-warning">Pending</button>
@@ -67,8 +62,8 @@
                                 @endif
                             </td>
                             <td>{{ $item->created_at->diffForHumans() }}</td>
-                            <td>{{ $item->updated_at->diffForHumans() }}</td>
                             <td>
+                                <a class="btn btn-info btn-sm" href="{{ route('admin.delivery.details', $item->id) }}">Details</a>
                                 <a class="btn btn-warning btn-sm" href="{{ route('admin.deliveryEdit', $item->id) }}">Edit</a>
                                 <a class="btn btn-danger btn-sm" href="{{ route('admin.fueldelivery') }}"
                                    onclick="event.preventDefault();

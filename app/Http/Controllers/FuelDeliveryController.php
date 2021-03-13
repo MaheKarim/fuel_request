@@ -44,6 +44,7 @@ class FuelDeliveryController extends Controller
         $fueldeliveris->phn_number = $request->phn_number;
         $fueldeliveris->delivery_address = $request->delivery_address;
         $fueldeliveris->quantity = $request->quantity;
+        $fueldeliveris->priority_name_id = $request->priority_name_id;
         $fueldeliveris->user_id = Auth::id();
         $fueldeliveris->save();
 
