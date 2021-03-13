@@ -79,6 +79,5 @@ class FuelTypeController extends Controller
         session()->flash('error', 'Deleted Successfully!');
 
         return redirect()->route('admin.fueltype');
-
     }
 }

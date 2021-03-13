@@ -9,9 +9,9 @@
 
             <div class="sb-sidenav-menu-heading">Pages</div>
 
-            <a class="nav-link" href="">
-                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                Users
+            <a class="nav-link" href="{{ route('admin.fueldelivery') }}">
+                <div class="sb-nav-link-icon"><i class="fab fa-audible"></i></div>
+                Fuel Delivery
             </a>
 
 

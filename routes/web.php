@@ -23,6 +23,10 @@ Route::get('/admin/dashboard', 'AdminController@index')->name('admin.home');
 
 // Admin Route Will Be Here
 Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministrator'])->group(function () {
+    Route::get('/fuel-delivery','AdminController@show_request')->name('fueldelivery');
+    Route::get('/fuel-delivery/edit/{id}','AdminController@delivery_edit')->name('deliveryEdit');
+    Route::post('/fuel-delivery/update/{id}','AdminController@delivery_update')->name('fuelDeliveryUpdate');
+    Route::delete('/fuel-delivery/delete/{id}', 'AdminController@delivery_destroy')->name('deliveryDestroy');
     // Fuel Type Route
     Route::get('/fuel-type', 'FuelTypeController@index')->name('fueltype');
     Route::get('/fuel-type/create', 'FuelTypeController@create')->name('fueltype.create');
@@ -38,8 +42,11 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministr
     Route::post('/refuelling-for/update/{id}', 'RefuelingForController@update')->name('refuelling.update');
     Route::delete('/refuelling-for/delete/{id}', 'RefuelingForController@destroy')->name('refuelling.destroy');
 });
+
+// User Route Here
+
 Route::name('user.')->prefix('user')->middleware(['auth', 'role:user'])->group(function () {
     // Fuel Delivery - User
     Route::get('/fuel-delivery', 'FuelDeliveryController@index')->name('fuelDelivery');
     Route::post('/fuel-delivery-store', 'FuelDeliveryController@store')->name('fuelDelivery.store');
-    });
+});

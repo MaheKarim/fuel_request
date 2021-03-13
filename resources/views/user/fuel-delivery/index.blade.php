@@ -102,7 +102,7 @@
                     <td>{{ $deliver->Fuel->fuel_name }}</td>
                     <td>{{ $deliver->RefuellingName->refueling_reason	 }}</td>
                     <td>{{ $deliver->delivery_address }}</td>
-                  <td> {{ date('d-m-Y', strtotime($deliver->booking_date)) }} </td>
+                    <td> {{ date('d-m-Y', strtotime($deliver->booking_date)) }} </td>
                     <td>{{ $deliver->quantity }}</td>
                     <td>
                         @if($deliver->isApproved == 0)
