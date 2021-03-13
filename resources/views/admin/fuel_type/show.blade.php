@@ -36,6 +36,7 @@
                             <tr>
                                 <th>Fuel Type</th>
                                 <th>Created At</th>
+                                <th>Updated At</th>
                                 <th>Details</th>
                             </tr>
                         </thead>
@@ -43,6 +44,7 @@
                             <tr>
                                 <th>Fuel Type</th>
                                 <th>Created At</th>
+                                <th>Updated At</th>
                                 <th>Details</th>
                             </tr>
                         </tfoot>
@@ -50,7 +52,8 @@
                             @foreach ($fuels as $fuel)
                             <tr>
                                 <td>{{ $fuel->fuel_name }}</td>
-                                <td>{{ $fuel->created_at }}</td>
+                                <td>{{ $fuel->created_at->diffForHumans() }}</td>
+                                <td>{{ $fuel->updated_at->diffForHumans() }}</td>
                                 <td>
                                     <a class="btn btn-warning btn-sm" href="{{ route('admin.fueltype.edit', $fuel->id) }}">Edit</a>
                                     <a class="btn btn-danger btn-sm" href="{{ route('admin.fueltype') }}"

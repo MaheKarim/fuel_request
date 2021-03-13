@@ -15,7 +15,6 @@ class FuelTypeSeeder extends Seeder
         App\FuelType::create([
             'id' => '1',
             'fuel_name' => 'Diseal',
-
         ]);
 
         App\FuelType::create([

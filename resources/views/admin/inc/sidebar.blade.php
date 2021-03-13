@@ -28,16 +28,15 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-gas-pump"></i></div>
                         Fuel Type
                     </a>
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                    <a class="nav-link collapsed" href="{{ route('admin.refuelling') }}" >
                         <div class="sb-nav-link-icon"><i class="fas fa-file-prescription"></i></div>
-
                         Refueling For
                     </a>
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                    <a class="nav-link collapsed" href="#">
                         <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
                         Area
                     </a>
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                    <a class="nav-link collapsed" href="#">
                         <div class="sb-nav-link-icon"><i class="fas fa-walking"></i></div>
                         Priority Set
                     </a>
