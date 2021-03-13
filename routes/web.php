@@ -26,6 +26,10 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministr
 
     Route::get('/fuel-type', 'FuelTypeController@index')->name('fueltype');
     Route::get('/fuel-type/create', 'FuelTypeController@create')->name('fueltype.create');
-    Route::post('/fueltype-store', 'FuelTypeController@store')->name('fueltype.store');
+    Route::post('/fuel-type-store', 'FuelTypeController@store')->name('fueltype.store');
+    Route::get('/fuel-type/edit/{id}', 'FuelTypeController@edit')->name('fueltype.edit');
+
+    Route::post('/fuelType-update/{id}', 'FuelTypeController@update')->name('fuelTypeUpdate');
+
     Route::delete('/fuel-type/{id}', 'FuelTypeController@destroy')->name('fueltype.destroy');
 });

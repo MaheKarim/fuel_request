@@ -28,12 +28,6 @@ class FuelTypeController extends Controller
         return view('admin.fuel_type.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         // Validation
@@ -48,51 +42,36 @@ class FuelTypeController extends Controller
        // Need Refactor
       // $fuels = FuelType()->create($request->validate());
 
-
         session()->flash('success','Fuel Type Created Successfully!');
         return redirect()->route('admin.fueltype');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\FuelType  $fuelType
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(FuelType $fuelType)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\FuelType  $fuelType
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(FuelType $fuelType)
+    public function edit($id)
     {
-        //
+        $fuels = FuelType::find($id);
+
+        return view('admin.fuel_type.edit', compact('fuels'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\FuelType  $fuelType
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, FuelType $fuelType)
+
+    public function update(Request $request, $id)
     {
-        //
+
+        $fuels = FuelType::find($id)->update([
+            'fuel_name' => $request->fuel_name,
+        ]);
+
+        session()->flash('success','Fuel Type Successfully Updated!');
+        return redirect()->route('admin.fueltype');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\FuelType  $fuelType
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         // testing code
