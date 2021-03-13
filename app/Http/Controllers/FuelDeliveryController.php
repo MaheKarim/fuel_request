@@ -48,8 +48,7 @@ class FuelDeliveryController extends Controller
         $fueldeliveris->save();
 
         session()->flash('success', 'Created Successfully!');
-
-        return view('user.fuel-delivery.index');
+        return redirect()->route('user.fuelDelivery');
     }
 
     /**

@@ -96,7 +96,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($deliveries as $deliver)
+                @foreach( $deliveries as $deliver)
                 <tr>
                     <th scope="row">{{ $deliver->id }}</th>
                     <td>{{ $deliver->Fuel->fuel_name }}</td>
