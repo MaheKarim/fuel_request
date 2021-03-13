@@ -11,8 +11,7 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- ![End user - Fuel Delivery Feature](https://user-images.githubusercontent.com/16819523/111032605-35772300-8437-11eb-8b74-7f888d847ef9.png)
-.
+
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
@@ -22,11 +21,10 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Fuel Delivery Request - End User Dashboard
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+User can send fuel request to admin panel, from admin panel user will get request status notification feature. 
+![End user - Fuel Delivery Feature](https://user-images.githubusercontent.com/16819523/111032605-35772300-8437-11eb-8b74-7f888d847ef9.png)
 
 ## Laravel Sponsors
 
