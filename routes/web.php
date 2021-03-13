@@ -38,3 +38,8 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministr
     Route::post('/refuelling-for/update/{id}', 'RefuelingForController@update')->name('refuelling.update');
     Route::delete('/refuelling-for/delete/{id}', 'RefuelingForController@destroy')->name('refuelling.destroy');
 });
+Route::name('user.')->prefix('user')->middleware(['auth', 'role:user'])->group(function () {
+    // Fuel Delivery - User
+    Route::get('/fuel-delivery', 'FuelDeliveryController@index')->name('fuelDelivery');
+    Route::post('/fuel-delivery-store', 'FuelDeliveryController@store')->name('fuelDelivery.store');
+    });

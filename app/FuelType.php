@@ -8,5 +8,4 @@ class FuelType extends Model
 {
     // Fillable for Mass Assignment
     protected $guarded = [' '];
-
 }
