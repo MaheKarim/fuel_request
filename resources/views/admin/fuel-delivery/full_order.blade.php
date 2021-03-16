@@ -3,7 +3,8 @@
 @section('content')
     <h1 class="mt-4">Fuel Delivery</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item " > Dashboard </li>
+        <li class="breadcrumb-item">Dashboard</li>
+        <li class="breadcrumb-item">Fuel Delivery</li>
         <li class="breadcrumb-item active">Order Details</li>
     </ol>
     <div class="col-md-8">
@@ -77,7 +78,6 @@
             </div>
             <div class="form-group col-4 ">
                 <a type="button" href="{{ route('admin.fueldelivery') }}"  class="btn btn-group-sm btn-primary ">Back</a>
-
             </div>
 
             <!-- /.card-body -->

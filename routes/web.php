@@ -27,6 +27,8 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministr
     Route::post('/fuel-delivery/update/{id}','AdminController@delivery_update')->name('fuelDeliveryUpdate');
     Route::delete('/fuel-delivery/delete/{id}', 'AdminController@delivery_destroy')->name('deliveryDestroy');
     Route::get('/fuel-delivery/order/details/{id}','AdminController@details')->name('delivery.details');
+    // Priority
+    Route::get('/priority-all', 'AdminController@priority_see')->name('prioritySee');
     // Fuel Type Route
     Route::get('/fuel-type', 'FuelTypeController@index')->name('fueltype');
     Route::get('/fuel-type/create', 'FuelTypeController@create')->name('fueltype.create');
@@ -41,6 +43,9 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministr
     Route::get( '/refuelling-for/edit/{id}', 'RefuelingForController@edit')->name('refuelling.edit');
     Route::post('/refuelling-for/update/{id}', 'RefuelingForController@update')->name('refuelling.update');
     Route::delete('/refuelling-for/delete/{id}', 'RefuelingForController@destroy')->name('refuelling.destroy');
+    // Cylinder Name & Type
+    Route::get('/gas-cylinder-service','Settings\CylinderController@index')->name('gasCylinderService');
+    Route::post('/gas-cylinder-store','Settings\CylinderController@store')->name('gasCylinder.store');
 });
 
 // User Route Here

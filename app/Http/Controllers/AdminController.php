@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\FuelDelivery;
+use App\Priority;
 use App\User;
 
 use Illuminate\Http\Request;
@@ -53,5 +54,12 @@ class AdminController extends Controller
         $delivery = FuelDelivery::find($id);
 
         return view('admin.fuel-delivery.full_order', compact('delivery'));
+    }
+
+    public function priority_see()
+    {
+        $priorities = Priority::all();
+
+        return view('admin.priority.all', compact('priorities'));
     }
 }

@@ -32,11 +32,11 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-file-prescription"></i></div>
                         Refueling For
                     </a>
-                    <a class="nav-link collapsed" href="#">
+                    <a class="nav-link collapsed" href="{{ route('admin.gasCylinderService') }}">
                         <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
-                        Area
+                        LPG Cylinder Set
                     </a>
-                    <a class="nav-link collapsed" href="#">
+                    <a class="nav-link collapsed" href="{{ route('admin.prioritySee') }}">
                         <div class="sb-nav-link-icon"><i class="fas fa-walking"></i></div>
                         Priority Set
                     </a>

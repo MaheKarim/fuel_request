@@ -12,7 +12,7 @@
                 <div class="sb-nav-link-icon"><i class="fas fa-gas-pump"></i></div>
                 Fuel Delivery
             </a>
-            <a class="nav-link" href="tables.html" style="color: white;">
+            <a class="nav-link" href="tables.htm" style="color: white;">
                 <div class="sb-nav-link-icon"><i class="fas fa-pump-soap"></i></div>
                 LPG Cylinder
             </a>
