@@ -29,6 +29,8 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministr
     Route::get('/fuel-delivery/order/details/{id}','AdminController@details')->name('delivery.details');
     // Priority
     Route::get('/priority-all', 'AdminController@priority_see')->name('prioritySee');
+    Route::get('/lpg-delivery/all', 'AdminController@lpg')->name('lpg');
+    Route::delete('/lpg-delivery/destroy/{id}', 'AdminController@lpg_destroy')->name('lpg.destroy');
     // Fuel Type Route
     Route::get('/fuel-type', 'FuelTypeController@index')->name('fueltype');
     Route::get('/fuel-type/create', 'FuelTypeController@create')->name('fueltype.create');

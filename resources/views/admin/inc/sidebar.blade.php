@@ -13,6 +13,10 @@
                 <div class="sb-nav-link-icon"><i class="fab fa-audible"></i></div>
                 Fuel Delivery
             </a>
+            <a class="nav-link" href="{{ route('admin.lpg') }}">
+                <div class="sb-nav-link-icon"><i class="fas fa-gas-pump"></i></div>
+               LPG Cylinder Delivery
+            </a>
 
 
             <div class="sb-sidenav-menu-heading">Interface</div>

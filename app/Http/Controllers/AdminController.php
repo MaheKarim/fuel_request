@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\FuelDelivery;
+use App\LPGDelivery;
 use App\Priority;
 use App\User;
 
@@ -61,5 +62,20 @@ class AdminController extends Controller
         $priorities = Priority::all();
 
         return view('admin.priority.all', compact('priorities'));
+    }
+
+    public function lpg()
+    {
+        $lpgDeliveries = LPGDelivery::all();
+
+        return view('admin.lpg-delivery.index', compact('lpgDeliveries'));
+    }
+
+    public function lpg_destroy($id)
+    {
+        $lpgDeliveries = LPGDelivery::find($id)->delete();
+        session()->flash('error', 'Deleted Successfully!');
+
+        return redirect(route('admin.lpg'));
     }
 }
