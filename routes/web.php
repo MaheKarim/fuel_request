@@ -56,4 +56,6 @@ Route::name('user.')->prefix('user')->middleware(['auth', 'role:user'])->group(f
     // Fuel Delivery - User
     Route::get('/fuel-delivery', 'FuelDeliveryController@index')->name('fuelDelivery');
     Route::post('/fuel-delivery-store', 'FuelDeliveryController@store')->name('fuelDelivery.store');
+    // LPG Cylinder - User
+    Route::get('/lpg-delivery','User\LPGDeliveryController@index')->name('lpgIndex');
 });

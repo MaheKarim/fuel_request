@@ -12,7 +12,7 @@
                 <div class="sb-nav-link-icon"><i class="fas fa-gas-pump"></i></div>
                 Fuel Delivery
             </a>
-            <a class="nav-link" href="tables.htm" style="color: white;">
+            <a class="nav-link" href="{{ route('user.lpgIndex') }}" style="color: white;">
                 <div class="sb-nav-link-icon"><i class="fas fa-pump-soap"></i></div>
                 LPG Cylinder
             </a>
@@ -24,26 +24,7 @@
                 <div class="sb-nav-link-icon"><i class="fas fa-car-side"></i></div>
                 Car Maintenance
             </a>
-
-
-            <div class="sb-sidenav-menu-heading">Interface</div>
-
-            <a class="nav-link collapsed" style="color: white;" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                Pages
-                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-            </a>
-            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                    <a class="nav-link collapsed" style="color: white;" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                        Authentication
-                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                    </a>
-
-
-                </nav>
-            </div>
-
+            
         </div>
     </div>
     <div class="sb-sidenav-footer">

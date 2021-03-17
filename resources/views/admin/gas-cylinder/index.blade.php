@@ -74,7 +74,7 @@
                     <td>{{ $gas->cylinder_price }}</td>
                     <td>
                         <a type="button" class="btn btn-primary" href="{{ route('admin.gasCylinder.edit', $gas->id) }}">Edit</a>
-                        
+
                         <a type="button" class="btn btn-info" href="{{ route('admin.gasCylinderService') }}" onclick="event.preventDefault();
                             document.getElementById(
                             'delete-form-{{$gas->id}}').submit();">Delete</a>
