@@ -12,10 +12,7 @@
         <div class="alert alert-danger">
             {{ session()->get('error') }}
         </div>
-    @endif
-    <!-- Notification End Here -->
-    <!-- Notification Start Here -->
-    @if (session()->has('success'))
+    @elseif (session()->has('success'))
         <div class="alert alert-success">
             {{ session()->get('success') }}
         </div>
@@ -33,11 +30,9 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-{{--                        <th>ID</th>--}}
                         <th>User</th>
                         <th>Fuel Name</th>
                         <th>Booking Date</th>
-{{--                        <th>Quantity</th>--}}
                         <th>Delivery Priority</th>
                         <th>isApproved</th>
                         <th>Created At</th>
@@ -48,11 +43,9 @@
                     <tbody>
                     @foreach ($delivery as $item)
                         <tr>
-{{--                            <td>{{ $item->id }}</td>--}}
                             <td>{{ $item->user->name }}</td>
                             <td>{{ $item->Fuel->fuel_name }}</td>
                             <td>{{ date('d-m-Y', strtotime($item->booking_date)) }}</td>
-{{--                            <td>{{ $item->quantity }}</td>--}}
                             <td>{{ $item->Priority->priority_name }}</td>
                             <td>
                                 @if($item->isApproved == 0)

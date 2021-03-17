@@ -46,6 +46,9 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'role:superadministr
     // Cylinder Name & Type
     Route::get('/gas-cylinder-service','Settings\CylinderController@index')->name('gasCylinderService');
     Route::post('/gas-cylinder-store','Settings\CylinderController@store')->name('gasCylinder.store');
+    Route::get('/gas-cylinder/edit/{id}','Settings\CylinderController@edit')->name('gasCylinder.edit');
+    Route::post('/gas-cylinder/update/{id}','Settings\CylinderController@update')->name('gasCylinder.update');
+    Route::delete('/gas-cylinder/delete/{id}', 'Settings\CylinderController@destroy')->name('gasCylinder.delete');
 });
 
 // User Route Here

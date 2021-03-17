@@ -15,8 +15,8 @@ class CylinderController extends Controller
      */
     public function index()
     {
-       // return  'Echo';
-        return view('admin.gas-cylinder.index');
+        $gases = LPGCylinder::all();
+        return view('admin.gas-cylinder.index', compact('gases'));
     }
 
     /**
@@ -37,6 +37,13 @@ class CylinderController extends Controller
      */
     public function store(Request $request)
     {
+        // Validation
+        $request->validate([
+            'cylinder_name' => 'required|max:255',
+            'cylinder_size' => 'required|max:255',
+            'cylinder_stock' => 'required|max:255',
+            'cylinder_price' => 'required|max:255',
+        ]);
         $cylinders = new LPGCylinder();
         $cylinders->cylinder_name = $request->cylinder_name;
         $cylinders->cylinder_size = $request->cylinder_size;
@@ -44,6 +51,7 @@ class CylinderController extends Controller
         $cylinders->cylinder_price = $request->cylinder_price;
         $cylinders->save();
 
+        session()->flash('success', 'Created Successfully!');
         return redirect()->route('admin.gasCylinderService');
     }
 
@@ -66,7 +74,8 @@ class CylinderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $gases = LPGCylinder::find($id);
+        return view('admin.gas-cylinder.edit', compact('gases'));
     }
 
     /**
@@ -78,7 +87,22 @@ class CylinderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Validation
+        $request->validate([
+            'cylinder_name' => 'required|max:255',
+            'cylinder_size' => 'required|max:255',
+            'cylinder_stock' => 'required|max:255',
+            'cylinder_price' => 'required|max:255',
+        ]);
+
+        $gases = LPGCylinder::find($id)->update([
+            'cylinder_name' => $request->cylinder_name,
+            'cylinder_size' => $request->cylinder_size,
+            'cylinder_stock' => $request->cylinder_stock,
+            'cylinder_price' => $request->cylinder_price,
+        ]);
+        session()->flash('success', 'Updated Successfully!');
+        return redirect()->route('admin.gasCylinderService');
     }
 
     /**
@@ -89,6 +113,9 @@ class CylinderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $gases = LPGCylinder::find($id)->delete();
+
+        session()->flash('error', 'Deleted Successfully!');
+        return back();
     }
 }

@@ -39,9 +39,6 @@ class FuelTypeController extends Controller
         $fuels->fuel_name = $request->fuel_name;
         $fuels->save();
 
-       // Need Refactor
-      // $fuels = FuelType()->create($request->validate());
-
         session()->flash('success','Fuel Type Created Successfully!');
         return redirect()->route('admin.fueltype');
     }
@@ -62,7 +59,10 @@ class FuelTypeController extends Controller
 
     public function update(Request $request, $id)
     {
-
+        // Validation
+        $request->validate([
+            'fuel_name' => 'required|max:255',
+        ]);
         $fuels = FuelType::find($id)->update([
             'fuel_name' => $request->fuel_name,
         ]);
