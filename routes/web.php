@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', 'Settings\FrontEndController@index');
 Auth::routes();
 
 Route::get('/user/dashboard', 'UserController@index')->name('user.home');
