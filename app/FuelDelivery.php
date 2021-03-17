@@ -12,7 +12,7 @@ class FuelDelivery extends Model
     // Fuel Type
     public function Fuel()
     {
-        return $this->belongsTo('App\FuelType', 'fuel_name_id','id');
+        return $this->belongsTo(FuelType::class, 'fuel_name_id','id');
     }
     // Refuelling For
     public function RefuellingName()

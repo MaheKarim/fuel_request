@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\LPGDelivery;
 use Illuminate\Http\Request;
+use Auth;
 
 class LPGDeliveryController extends Controller
 {
@@ -14,7 +16,8 @@ class LPGDeliveryController extends Controller
      */
     public function index()
     {
-        return view('user.lpg.index');
+        $lpgDeliveries = LPGDelivery::where('user_id', Auth::id())->get();
+        return view('user.lpg.index', compact('lpgDeliveries'));
     }
 
     /**
@@ -35,7 +38,21 @@ class LPGDeliveryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'cylinder_name_id' => 'required',
+            'address' => 'required|min:3',
+            'priority_name_id' => 'required',
+        ]);
+
+        $lpgDeliveries = new LPGDelivery();
+        $lpgDeliveries->cylinder_name_id = $request->cylinder_name_id;
+        $lpgDeliveries->address = $request->address;
+        $lpgDeliveries->priority_name_id = $request->priority_name_id;
+        $lpgDeliveries->user_id = Auth::id();
+        $lpgDeliveries->save();
+
+        session()->flash('success', 'Created Successfully!');
+        return redirect()->route('user.lpgIndex');
     }
 
     /**

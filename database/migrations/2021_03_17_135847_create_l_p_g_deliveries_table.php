@@ -15,6 +15,10 @@ class CreateLPGDeliveriesTable extends Migration
     {
         Schema::create('l_p_g_deliveries', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->unsignedBigInteger('cylinder_name_id');
+            $table->string('address');
+            $table->integer('priority_name_id');
             $table->timestamps();
         });
     }
