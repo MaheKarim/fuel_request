@@ -34,7 +34,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">eNno</a></h1>
+      <h1 class="logo mr-auto"><a href="index.html">FuelSheba</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -59,8 +59,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Elegant and creative solutions</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
+          <h1>On-demand Fuel Request Service</h1>
+          <h2>Order Fuel / Gas From Us. We will deliver it to your doorstep</h2>
           <div class="d-flex">
             <a href="{{ route('register') }}" class="btn-get-started scrollto">Register</a>
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
@@ -83,22 +83,22 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="icon-box">
-              <div class="icon"><i class="icofont-computer"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <div class="icon"><i class="icofont-children-care"></i></div>
+              <h4 class="title"><a href="">Order Fuel</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="icofont-image"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
+              <h4 class="title"><a href="">Order Gas</a></h4>
               <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="icofont-tasks-alt"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <div class="icon"><i class="icofont-car-alt-3"></i></div>
+              <h4 class="title"><a href="">Car Washing</a></h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
@@ -122,12 +122,12 @@
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">521</span>
-            <p>Projects</p>
+            <p>Orders</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">1,463</span>
-            <p>Hours Of Support</p>
+            <p>Liters Of Fuel</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
@@ -147,46 +147,46 @@
         <div class="section-title">
           <span>Services</span>
           <h2>Services</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+          <p>Our On Demand Fuel, Gas & Car Washing Request Service To Customer Doorstep</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><a href="">Emergency Delivery</a></h4>
+              <p>We Deliver Mechanics / Fuel / Gas For Emergency Step</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4><a href="">Fuel Dellivery</a></h4>
+              <p>Petrol - Diseal - Octane - Kerosine Any Kind Of Fuel We Can Deliver</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="">Car Wash</a></h4>
+              <p>We Provide On Demand Car Washing Service For Our User</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <h4><a href="">Gas Deliver</a></h4>
+              <p>Any Kind Of Home Appliences Gas Solution We Will Provide</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Dele cardo</a></h4>
+              <h4><a href="">Car Maintainence</a></h4>
               <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
             </div>
           </div>
@@ -194,7 +194,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4><a href="">Divera don</a></h4>
+              <h4><a href="">Corrporate Solution</a></h4>
               <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
             </div>
           </div>
@@ -459,7 +459,7 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong><span>eNno</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>FuelSheba</span></strong>. All Rights Reserved
       </div>
 
     </div>
